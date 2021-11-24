@@ -26,7 +26,7 @@ gsub_file('Gemfile', /# gem 'redis'/, "gem 'redis'")
 ########################################
 run 'rm -rf app/assets/stylesheets'
 run 'rm -rf vendor'
-run 'curl -L https://github.com/lewagon/rails-stylesheets/archive/master.zip > stylesheets.zip'
+run 'curl -L https://github.com/fnyxart/rails-templates/rails-stylesheets/archive/master.zip > stylesheets.zip'
 run 'unzip stylesheets.zip -d app/assets && rm stylesheets.zip && mv app/assets/rails-stylesheets-master app/assets/stylesheets'
 
 # Dev environment
@@ -84,8 +84,8 @@ end
 
 # README
 ########################################
-markdown_file_content = <<-MARKDOWN
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+markdown_file_content = <<~MARKDOWN
+  Rails app by [fnyxart](https://github.com/fnyxart)
 MARKDOWN
 file 'README.md', markdown_file_content, force: true
 
