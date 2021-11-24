@@ -58,7 +58,7 @@ gsub_file('app/views/layouts/application.html.erb', "<%= stylesheet_link_tag 'ap
 # README
 ########################################
 markdown_file_content = <<~MARKDOWN
-  Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+  Rails app by [fnyxart](https://github.com/fnyxart)
 MARKDOWN
 file 'README.md', markdown_file_content, force: true
 
@@ -104,10 +104,8 @@ after_bundle do
   run 'yarn add popper.js jquery bootstrap@4.6'
   append_file 'app/javascript/packs/application.js', <<~JS
 
-
     // ----------------------------------------------------
-    // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
-    // WRITE YOUR OWN JS STARTING FROM HERE 👇
+    // Custom JS configuration
     // ----------------------------------------------------
 
     // External imports
@@ -147,10 +145,10 @@ after_bundle do
 
   # Rubocop
   ########################################
-  run 'curl -L https://raw.githubusercontent.com/lewagon/rails-templates/master/.rubocop.yml > .rubocop.yml'
+  run 'curl -L https://raw.githubusercontent.com/fnyxart/rails-templates/master/.rubocop.yml > .rubocop.yml'
 
   # Git
   ########################################
   git add: '.'
-  git commit: "-m 'Initial commit with minimal template from https://github.com/lewagon/rails-templates'"
+  git commit: "-m 'Initial commit to set up rails app'"
 end

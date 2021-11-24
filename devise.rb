@@ -206,10 +206,10 @@ after_bundle do
 
   # Rubocop
   ########################################
-  run 'curl -L https://raw.githubusercontent.com/lewagon/rails-templates/master/.rubocop.yml > .rubocop.yml'
+  run 'curl -L https://raw.githubusercontent.com/fnyxart/rails-templates/master/.rubocop.yml > .rubocop.yml'
 
   # Git
   ########################################
   git add: '.'
-  git commit: "-m 'Initial commit with devise template from https://github.com/lewagon/rails-templates'"
+  git commit: "-m 'Initial commit with devise'"
 end
