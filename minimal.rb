@@ -102,6 +102,7 @@ after_bundle do
   # Webpacker / Yarn
   ########################################
   run 'yarn add popper.js jquery bootstrap@4.6'
+  run "rails webpacker:install:stimulus"
   append_file 'app/javascript/packs/application.js', <<~JS
 
     // ----------------------------------------------------
@@ -150,5 +151,5 @@ after_bundle do
   # Git
   ########################################
   git add: '.'
-  git commit: "-m 'Initial commit to set up rails app'"
+  git commit: "-m 'Initial commit with bootstrap and stimulus'"
 end
